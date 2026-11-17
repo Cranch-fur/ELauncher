@@ -1,0 +1,46 @@
+#pragma code_page(65001)
+
+#include <windows.h>
+#include "resource.h"
+
+// Application icon, also used as the window icon (Properties.Resources.Icon).
+IDI_ICON             ICON    "Resources\\Icon.ico"
+
+// Default splash screen and logo, used when ELauncher\SplashScreen.mfx / Logo.mfx are missing.
+IDR_IMG_SPLASHSCREEN RCDATA  "Resources\\IMG_SplashScreen.png"
+IDR_IMG_LOGO         RCDATA  "Resources\\IMG_Logo.png"
+
+// Font of the time played label: Inter + Noto Sans CJK subset (SIL Open Font License, see Resources\Fonts-OFL.txt).
+IDR_FONT_LABEL       RCDATA  "Resources\\ELauncherLabel.ttf"
+
+// Version information, shown in Explorer under Properties > Details.
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION     1,0,0,0
+ PRODUCTVERSION  1,0,0,0
+ FILEFLAGSMASK   0x3fL
+ FILEFLAGS       0x0L
+ FILEOS          VOS_NT_WINDOWS32
+ FILETYPE        VFT_APP
+ FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Starts your game with a short splash screen and keeps track of how long you have played. https://github.com/Cranch-fur"
+            VALUE "CompanyName", "Cranch the wolf"
+            VALUE "FileDescription", "ELauncher"
+            VALUE "FileVersion", "1.0.0"
+            VALUE "Homepage", "https://github.com/Cranch-fur"
+            VALUE "InternalName", "Eefernal Launcher.exe"
+            VALUE "LegalCopyright", "Copyright © 2026 Cranch the wolf"
+            VALUE "OriginalFilename", "Eefernal Launcher.exe"
+            VALUE "ProductName", "ELauncher"
+            VALUE "ProductVersion", "1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
